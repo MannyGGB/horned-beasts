@@ -1,17 +1,21 @@
 import HornedBeast from "./HornedBeast";
 
-export default function Gallery(props) {
+export default function Gallery() {
   return (
-    <section>
+    <section className="animal-section">
       <div>
-        <HornedBeast title="animal" />
-        <HornedBeast imageUrl="https://www.fundacionaquae.org/wp-content/uploads/2018/10/proteger-a-los-animales-1024x654.jpg" />
-        <HornedBeast description="animal info" />
+        <HornedBeast
+          title="animal"
+          imageUrl="https://www.fundacionaquae.org/wp-content/uploads/2018/10/proteger-a-los-animales-1024x654.jpg"
+          description="animal info"
+        />
       </div>
       <div>
-        <HornedBeast title="animal" />
-        <HornedBeast imageUrl="https://www.fundacionaquae.org/wp-content/uploads/2018/10/proteger-a-los-animales-1024x654.jpg" />
-        <HornedBeast description="animal info" />
+        <HornedBeast
+          title="animal"
+          imageUrl="https://www.fundacionaquae.org/wp-content/uploads/2018/10/proteger-a-los-animales-1024x654.jpg"
+          description="animal info"
+        />
       </div>
     </section>
   );
