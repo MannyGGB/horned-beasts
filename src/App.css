@@ -12,8 +12,9 @@
 }
 
 .animal-section {
+  padding: 20px;
   display: flex;
-  justify-content: space-evenly;
+  flex-direction: column;
 }
 img {
   width: 300px;
