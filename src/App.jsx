@@ -12,11 +12,17 @@ function App() {
     setSelectedBeast(!showSelectedBeast);
   }
 
+  const [toggleImage, setImage] = useState(false);
+  function handleToggleImage() {
+    setImage(!toggleImage);
+  }
+
   return (
     <>
       <Header />
       <Gallery data={data} />
       {showSelectedBeast && <SelectedBeast onClick={handleShowSelectedBeast} />}
+      {toggleImage && <SelectedBeast onClick={handleToggleImage} />}
       <Footer />
     </>
   );

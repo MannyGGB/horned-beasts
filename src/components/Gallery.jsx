@@ -3,7 +3,11 @@ import HornedBeast from "./HornedBeast";
 
 //every function needs a return; in this case, we have two returns
 
-export default function Gallery({ data, handleShowSelectedBeast }) {
+export default function Gallery({
+  data,
+  handleShowSelectedBeast,
+  handleToggleImage,
+}) {
   return (
     // you can't declare variables inside the return
     <section className="animal-section">
@@ -15,7 +19,9 @@ export default function Gallery({ data, handleShowSelectedBeast }) {
             title={beast.title} // we can access the beast properties with dot notation
             imageUrl={beast.image_url}
             description={beast.description}
-            onClick={handleShowSelectedBeast}
+            onClick={
+              handleShowSelectedBeast && handleToggleImage(beast.imageUrl)
+            }
           />
         );
       })}

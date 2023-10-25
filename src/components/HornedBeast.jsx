@@ -5,6 +5,7 @@ export default function HornedBeast({
   imageUrl,
   description,
   handleShowSelectedBeast,
+  handleToggleImage,
 }) {
   const [likes, setLikes] = useState(0);
   function handleLikes() {
@@ -18,7 +19,7 @@ export default function HornedBeast({
           src={imageUrl}
           alt="animal"
           title="animal"
-          onClick={handleShowSelectedBeast}
+          onClick={handleShowSelectedBeast && handleToggleImage}
         />
         <p>{description}</p>
         <p onClick={handleLikes}>😍 {likes}</p>
