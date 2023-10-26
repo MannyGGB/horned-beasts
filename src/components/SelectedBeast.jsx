@@ -1,14 +1,12 @@
 export default function SelectedBeast({
   handleShowSelectedBeast,
-  handleToggleImage,
+  toggleImage,
 }) {
   return (
-    <div className="selectedBeast">
-      <img src={imageUrl} alt="animal" title="animal" />
-      <p>{description}</p>
-      <button onClick={handleShowSelectedBeast && handleToggleImage}>
-        Close
-      </button>
+    <div className="selectedBeast" onClick={handleShowSelectedBeast}>
+      <h2>{toggleImage.title}</h2>
+      <img src={toggleImage.imageUrl} alt="animal" title="animal" />
+      <p>{toggleImage.description}</p>
     </div>
   );
 }

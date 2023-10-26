@@ -1,4 +1,5 @@
 import "./App.css";
+import Form from "./components/Form";
 import Gallery from "./components/Gallery";
 import Footer from "./components/Footer";
 import Header from "./components/Header";
@@ -8,21 +9,33 @@ import SelectedBeast from "./components/SelectedBeast";
 
 function App() {
   const [showSelectedBeast, setSelectedBeast] = useState(false);
-  function handleShowSelectedBeast() {
+  const [toggleImage, setImage] = useState({});
+  const [horns, setHorns] = useState("all");
+
+  function handleShowSelectedBeast(beast) {
     setSelectedBeast(!showSelectedBeast);
+    setImage(beast);
   }
 
-  const [toggleImage, setImage] = useState(false);
-  function handleToggleImage() {
-    setImage(!toggleImage);
+  function handleChange(event) {
+    setHorns(event.target.value);
   }
 
   return (
     <>
       <Header />
-      <Gallery data={data} />
-      {showSelectedBeast && <SelectedBeast onClick={handleShowSelectedBeast} />}
-      {toggleImage && <SelectedBeast onClick={handleToggleImage} />}
+      <Form handleChange={handleChange} />
+      <Gallery
+        data={data}
+        horns={horns}
+        handleShowSelectedBeast={handleShowSelectedBeast}
+      />
+      {showSelectedBeast && (
+        <SelectedBeast
+          handleShowSelectedBeast={handleShowSelectedBeast}
+          toggleImage={toggleImage}
+        />
+      )}
       <Footer />
     </>
   );

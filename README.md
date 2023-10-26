@@ -13,12 +13,24 @@ Currently, two official plugins are available:
 
 ## Time management
 
-Number and name of feature: Feature #1 "Display a Modal"
+Number and name of feature: Feature #3 "Display a Modal"
 
 Estimate of time needed to complete: 2 hours.
 
-Start time: 14:16
+Start time: 14:16 25/10/2023
 
-Finish time: **\_**
+Finish time: 13:00 26/10/2023
 
-Actual time needed to complete: **\_**
+Actual time needed to complete: 3h 30min
+
+---
+
+Number and name of feature: Feature #4 "Filter by Numbers of Horns"
+
+Estimate of time needed to complete: 3 hours.
+
+Start time: 13:15 26/10/2023
+
+Finish time: 15:45 26/10/2023
+
+Actual time needed to complete: 2h 30min
